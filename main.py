@@ -10,3 +10,19 @@
 #the inputs reseave data from what ever, that data can come from sensors or images, it just has to be readable for the machine
 #so its a must to somehow convert the real data to ones and zeros
 
+import numpy as np
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+training_outputs = np.array([[0,0,1],
+                             [1,1,1],
+                             [1,0,1],
+                             [0,1,1]])
+
+training_inputs = np.array([[0,1,1,0]]).T
+
+np.random.seed(1)
+
+
+
